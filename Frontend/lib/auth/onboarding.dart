@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:myapp/auth/welcome.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -50,7 +51,10 @@ class _OnboardingState extends State<Onboarding> {
                       ),
                       Text(
                         'Premium Bike Service',
-                        style: Theme.of(context).textTheme.headlineLarge,
+                        style: GoogleFonts.poppins(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                       const SizedBox(
                         height: 48,
@@ -85,7 +89,10 @@ class _OnboardingState extends State<Onboarding> {
                       ),
                       Text(
                         'Charger Service',
-                        style: Theme.of(context).textTheme.headlineLarge,
+                        style: GoogleFonts.poppins(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                       const SizedBox(
                         height: 48,
@@ -120,7 +127,10 @@ class _OnboardingState extends State<Onboarding> {
                       ),
                       Text(
                         'Battery Service',
-                        style: Theme.of(context).textTheme.headlineLarge,
+                        style: GoogleFonts.poppins(
+                          fontSize: 24,
+                          fontWeight: FontWeight.w500,
+                        ),
                       ),
                       const SizedBox(
                         height: 48,
@@ -153,7 +163,11 @@ class _OnboardingState extends State<Onboarding> {
               },
               child: Text(
                 'Skip',
-                style: Theme.of(context).textTheme.headlineSmall,
+                style: GoogleFonts.poppins(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.black,
+                ),
               ),
             ),
           )

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/auth/login.dart';
 import 'package:myapp/auth/register.dart';
-import 'package:myapp/components/elevatebutton.dart';
-import 'package:myapp/components/outlinebutton.dart';
+import 'package:myapp/components/buttons/elevatebutton.dart';
+import 'package:myapp/components/buttons/outlinebutton.dart';
 
 class Welcome extends StatefulWidget {
   const Welcome({super.key});
@@ -43,54 +43,57 @@ class _WelcomeState extends State<Welcome> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromRGBO(110, 250, 191, 1),
-      body: Padding(
-        padding: const EdgeInsets.all(32.0),
-        child: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Column(
-                children: [
-                  Image.asset(
-                    'assets/animations/scooter.gif',
-                    width: 500,
-                    height: 500,
-                  ),
-                  SlideTransition(
-                    position: _logoAnimation,
-                    child: Image.asset(
-                      'assets/images/logo.png',
-                      width: 250,
-                      height: 200,
-                    ),
-                  ),
-                ],
-              ),
-              SlideTransition(
-                position: _buttonAnimation,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+      appBar: AppBar(),
+      backgroundColor: Color(0xFFE8F5E9),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(32.0),
+          child: Container(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
                   children: [
-                    Expanded(
-                      child: Elevatebutton(
-                        Login(),
-                        'Login',
-                      ),
+                    Image.asset(
+                      'assets/animations/scooter.gif',
+                      width: 500,
+                      height: 500,
                     ),
-                    SizedBox(
-                      width: 16,
-                    ),
-                    Expanded(
-                      child: Outlinebutton(
-                        'Register',
-                        Register(),
+                    SlideTransition(
+                      position: _logoAnimation,
+                      child: Image.asset(
+                        'assets/images/logo.png',
+                        width: 250,
+                        height: 200,
                       ),
                     ),
                   ],
                 ),
-              )
-            ],
+                SlideTransition(
+                  position: _buttonAnimation,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Expanded(
+                        child: Elevatebutton(
+                          Login(),
+                          'Login',
+                        ),
+                      ),
+                      SizedBox(
+                        width: 16,
+                      ),
+                      Expanded(
+                        child: Outlinebutton(
+                          'Register',
+                          Register(),
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

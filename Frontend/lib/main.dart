@@ -3,7 +3,9 @@ import 'package:myapp/splashscreen/splashscreen.dart';
 import 'package:myapp/utils/theme/theme.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const MyApp(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -15,9 +17,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: EVTheme.lightTheme,
-      darkTheme: EVTheme.darkTheme,
-      themeMode: ThemeMode.system,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Color(0xFF58A65F),
+        ),
+        useMaterial3: true,
+      ),
       home: const Splashscreen(),
     );
   }
