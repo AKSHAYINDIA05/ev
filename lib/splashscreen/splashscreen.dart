@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/auth/login.dart';
 import 'package:myapp/auth/onboarding.dart';
+import 'package:myapp/auth/welcome.dart';
 
 class Splashscreen extends StatefulWidget {
   const Splashscreen({super.key});
@@ -19,7 +21,7 @@ class _SplashscreenState extends State<Splashscreen> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => Onboarding(),
+            builder: (context) => Welcome(),
           ),
         );
       },

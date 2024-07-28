@@ -4,7 +4,10 @@ import 'package:google_fonts/google_fonts.dart';
 class EVTextTheme {
   static TextTheme lightTextTheme = TextTheme(
     headlineSmall: GoogleFonts.poppins(
-        fontSize: 12, fontWeight: FontWeight.bold, color: Colors.black45),
+      fontSize: 12,
+      fontWeight: FontWeight.bold,
+      color: Colors.black45,
+    ),
     headlineMedium: GoogleFonts.poppins(
       fontSize: 16,
       fontWeight: FontWeight.bold,
@@ -18,7 +21,10 @@ class EVTextTheme {
   );
   static TextTheme darkTextTheme = TextTheme(
     headlineSmall: GoogleFonts.poppins(
-        fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white24),
+      fontSize: 12,
+      fontWeight: FontWeight.bold,
+      color: Colors.white24,
+    ),
     headlineMedium: GoogleFonts.poppins(
       fontSize: 16,
       fontWeight: FontWeight.bold,
