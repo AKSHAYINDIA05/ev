@@ -43,57 +43,54 @@ class _WelcomeState extends State<Welcome> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       backgroundColor: Color(0xFFE8F5E9),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(32.0),
-          child: Container(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  children: [
-                    Image.asset(
-                      'assets/animations/scooter.gif',
-                      width: 500,
-                      height: 500,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Column(
+                children: [
+                  Image.asset(
+                    'assets/animations/scooter.gif',
+                    width: 500,
+                    height: 500,
+                  ),
+                  SlideTransition(
+                    position: _logoAnimation,
+                    child: Image.asset(
+                      'assets/images/logo.png',
+                      width: 250,
+                      height: 200,
                     ),
-                    SlideTransition(
-                      position: _logoAnimation,
-                      child: Image.asset(
-                        'assets/images/logo.png',
-                        width: 250,
-                        height: 200,
+                  ),
+                ],
+              ),
+              SlideTransition(
+                position: _buttonAnimation,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Expanded(
+                      child: Elevatebutton(
+                        Login(),
+                        'Login',
+                      ),
+                    ),
+                    SizedBox(
+                      width: 16,
+                    ),
+                    Expanded(
+                      child: Outlinebutton(
+                        'Register',
+                        Register(),
                       ),
                     ),
                   ],
                 ),
-                SlideTransition(
-                  position: _buttonAnimation,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Expanded(
-                        child: Elevatebutton(
-                          Login(),
-                          'Login',
-                        ),
-                      ),
-                      SizedBox(
-                        width: 16,
-                      ),
-                      Expanded(
-                        child: Outlinebutton(
-                          'Register',
-                          Register(),
-                        ),
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            ),
+              )
+            ],
           ),
         ),
       ),

@@ -67,11 +67,13 @@ flutter:
   assets:
     - assets/animations/scooter.gif
     - assets/animations/electric.gif
+    - assets/animations/wave.gif
     - assets/images/bike_repair.jpg
     - assets/images/charger.jpg
     - assets/images/battery.jpg
     - assets/images/logo.png
     - assets/images/register.jpg
+    - assets/images/evbike.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

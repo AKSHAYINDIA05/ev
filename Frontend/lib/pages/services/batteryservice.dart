@@ -1,0 +1,98 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:myapp/components/batteryservice/details.dart';
+import 'package:myapp/components/batteryservice/steps.dart';
+import 'package:myapp/components/storeservice/details.dart';
+
+class Batteryservice extends StatefulWidget {
+  const Batteryservice({super.key});
+
+  @override
+  State<Batteryservice> createState() => _BatteryserviceState();
+}
+
+class _BatteryserviceState extends State<Batteryservice> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Services',
+          style: GoogleFonts.poppins(
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.only(
+            left: 32,
+            right: 32,
+            bottom: 32,
+          ),
+          child: Container(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Battery Service',
+                  style: GoogleFonts.poppins(
+                    fontSize: 32,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                Text(
+                  'What\'s Included',
+                  style: GoogleFonts.poppins(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 16,
+                ),
+                BatteryServiceDetails(),
+                SizedBox(
+                  height: 16,
+                ),
+                Text(
+                  'Steps Included',
+                  style: GoogleFonts.poppins(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(
+                  height: 16,
+                ),
+                BatteryServiceSteps(),
+                Row(
+                  children: [
+                    Expanded(
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          'Confirm',
+                          style: GoogleFonts.poppins(
+                            color: Colors.green.shade50,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
