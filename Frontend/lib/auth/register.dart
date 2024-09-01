@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:myapp/components/buttons/elevatebutton.dart';
 import 'package:myapp/components/register/passwordcreation.dart';
 import 'package:myapp/components/register/userdetails.dart';
 import 'package:myapp/components/register/vehicledetails.dart';
