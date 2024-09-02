@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "960377688695",
+    "project_id": "voltride-ccee4",
+    "storage_bucket": "voltride-ccee4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960377688695:android:711f2e0a7842eaddaa6c72",
+        "android_client_info": {
+          "package_name": "com.example.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfVK1-X2j-3jdH4IWwmmbYqCzrlMplabI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
